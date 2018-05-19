@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="戎码一生">
 <meta property="og:description" content="同步和异步的区别 同步的思想是所有的操作都做完，才返回给用户。这样用户在线等待的时间太长，给用户一种卡死了的感觉（就是系统迁移中，点击了迁移，界面就不动了，但是程序还在执行，卡死了的感觉）。这种情况下，用户不能关闭界面，如果关闭了，即迁移程序就中断了。 异步是将用户请求放入消息队列，并反馈给用户，系统迁移程序已经启动，你可以关闭浏览器了。然后程序再慢慢地去写入数据库去。这就是异步。但是用户没有卡死">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-19T11:48:20.363Z">
+<meta property="og:updated_time" content="2018-05-19T11:49:53.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery+Ajax+PHP实现异步登录">
 <meta name="twitter:description" content="同步和异步的区别 同步的思想是所有的操作都做完，才返回给用户。这样用户在线等待的时间太长，给用户一种卡死了的感觉（就是系统迁移中，点击了迁移，界面就不动了，但是程序还在执行，卡死了的感觉）。这种情况下，用户不能关闭界面，如果关闭了，即迁移程序就中断了。 异步是将用户请求放入消息队列，并反馈给用户，系统迁移程序已经启动，你可以关闭浏览器了。然后程序再慢慢地去写入数据库去。这就是异步。但是用户没有卡死">
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="创建时间：2018-05-19 19:48:34 / 修改时间：19:48:20" itemprop="dateCreated datePublished" datetime="2018-05-19T19:48:34+08:00">2018-05-19</time>
+              <time title="创建时间：2018-05-19 19:48:34 / 修改时间：19:49:53" itemprop="dateCreated datePublished" datetime="2018-05-19T19:48:34+08:00">2018-05-19</time>
             
 
             
@@ -384,6 +384,7 @@
 <p>异步是将用户请求放入消息队列，并反馈给用户，系统迁移程序已经启动，你可以关闭浏览器了。然后程序再慢慢地去写入数据库去。这就是异步。但是用户没有卡死的感觉，会告诉你，你的请求系统已经响应了。你可以关闭界面了。</p>
 <p>同步，是所有的操作都做完，才返回给用户结果。即写完数据库之后，在相应用户，用户体验不好。</p>
 <p>异步，不用等所有操作等做完，就相应用户请求。即先相应用户请求，然后慢慢去写数据库，用户体验较好。</p>
+<a id="more"></a>
 <p><strong>前端发送数据的方式：</strong><br>前端发送数据到后端，一是通过form表单来进行提交数据，还有一种是通过ajax来提交数据。这里我简单说一下如何使用ajax来发送数据。<br>ajax：异步的JavaScript和xml的简称。通过ajax可以实现在当前页面直接提交数据到后台服务器，并且局部更新UI。</p>
 <p><strong>下面介绍一下异步登录的具体实现</strong><br>HTML中的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//一些简单的input框</span><br><span class="line">&lt;input type=&quot;text&quot; id=&quot;username&quot; placeholder=&quot;用户名&quot;&gt;&lt;br/&gt;&lt;br/&gt;</span><br><span class="line">&lt;input type=&quot;password&quot; id=&quot;password&quot; placeholder=&quot;密码&quot;&gt;&lt;br/&gt;&lt;br/&gt;</span><br><span class="line">&lt;input id=&quot;login&quot; type=&quot;button&quot; value=&quot;登录&quot;&gt;</span><br></pre></td></tr></table></figure></p>
 <p>ajax部分的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	$(function()&#123;</span><br><span class="line">	//jQuery中的oncilck点击事件，&apos;#login&apos;为选择id为login的元素</span><br><span class="line">	    $(&apos;#login&apos;).on(&apos;click&apos;, function()&#123;</span><br><span class="line">	        var username = $(&apos;#username&apos;).val(); </span><br><span class="line">	        var password = $(&apos;#password&apos;).val();</span><br><span class="line">	        $.ajax(&#123;</span><br><span class="line">				type: &apos;POST&apos;,</span><br><span class="line">				url: &quot;login.php&quot;,</span><br><span class="line">				data: &#123;username: username, password: password&#125;,</span><br><span class="line">				dataType: &apos;json&apos;,</span><br><span class="line">				success: function(status)&#123;</span><br><span class="line">					if (status == 1) &#123;</span><br><span class="line">					    alert(&quot;登录成功&quot;);</span><br><span class="line">					    window.location.href=&quot;next.html&quot;;</span><br><span class="line">					&#125; else &#123;</span><br><span class="line">					    alert(&quot;登录失败&quot;);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
