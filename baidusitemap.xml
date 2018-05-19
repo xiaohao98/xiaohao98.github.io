@@ -4,43 +4,10 @@
 
     
     
-  <url>
-    <loc>http://www.xhcoder.com/blog-1.html</loc>
-    <lastmod>2018-05-19T12:07:59.662Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎使用 Cmd Markdown 编辑阅读器</title>
-        <pubTime>2018-04-22T08:01:07.548Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.xhcoder.com/blog-2.html</loc>
-    <lastmod>2018-05-19T12:07:46.823Z</lastmod>
-    <data>
-        <display>
-        <title>26. 删除排序数组中的重复项</title>
-        <pubTime>2018-04-22T13:55:36.666Z</pubTime>
-        
-        <tag>leetcode</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://www.xhcoder.com/blog-3.html</loc>
-    <lastmod>2018-05-19T12:07:07.802Z</lastmod>
+    <lastmod>2018-05-19T15:50:25.138Z</lastmod>
     <data>
         <display>
         <title>jQuery+Ajax+PHP实现异步登录</title>
@@ -54,10 +21,61 @@
          
          
            
+             
+              <breadCrumb title="ajax" url="http://www.xhcoder.com/categories/ajax/"/>
+          
+             
+              <breadCrumb title="php" url="http://www.xhcoder.com/categories/ajax/php/"/>
+          
+             
+              <breadCrumb title="jQuery" url="http://www.xhcoder.com/categories/ajax/php/jQuery/"/>
+          
         </display>
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://www.xhcoder.com/blog-1.html</loc>
+    <lastmod>2018-05-19T15:45:17.202Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎使用 Cmd Markdown 编辑阅读器</title>
+        <pubTime>2018-04-22T08:01:07.548Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Markdown" url="http://www.xhcoder.com/categories/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xhcoder.com/blog-2.html</loc>
+    <lastmod>2018-05-19T15:44:33.588Z</lastmod>
+    <data>
+        <display>
+        <title>26. 删除排序数组中的重复项</title>
+        <pubTime>2018-04-22T13:55:36.666Z</pubTime>
+        
+        <tag>leetcode</tag>
+         
+         
+           
+             
+              <breadCrumb title="leetcode" url="http://www.xhcoder.com/categories/leetcode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
     
     
 </urlset>
