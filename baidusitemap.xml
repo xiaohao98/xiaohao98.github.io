@@ -4,32 +4,14 @@
 
     
   <url>
-    <loc>http://www.xhcoder.com/blog-3.html</loc>
-    <lastmod>2018-05-19T11:49:53.135Z</lastmod>
-    <data>
-        <display>
-        <title>jQuery+Ajax+PHP实现异步登录</title>
-        <pubTime>2018-05-19T11:48:34.341Z</pubTime>
-        
-        <tag>-ajax -php -jQuery</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
     <loc>http://www.xhcoder.com/blog-1.html</loc>
-    <lastmod>2018-05-18T12:45:12.581Z</lastmod>
+    <lastmod>2018-05-19T12:07:59.662Z</lastmod>
     <data>
         <display>
         <title>欢迎使用 Cmd Markdown 编辑阅读器</title>
         <pubTime>2018-04-22T08:01:07.548Z</pubTime>
         
-        <tag>-Markdown</tag>
+        <tag>Markdown</tag>
          
          
            
@@ -40,13 +22,13 @@
     
   <url>
     <loc>http://www.xhcoder.com/blog-2.html</loc>
-    <lastmod>2018-05-18T12:45:00.906Z</lastmod>
+    <lastmod>2018-05-19T12:07:46.823Z</lastmod>
     <data>
         <display>
         <title>26. 删除排序数组中的重复项</title>
         <pubTime>2018-04-22T13:55:36.666Z</pubTime>
         
-        <tag>-leetcode</tag>
+        <tag>leetcode</tag>
          
          
            
@@ -54,5 +36,27 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://www.xhcoder.com/blog-3.html</loc>
+    <lastmod>2018-05-19T12:07:07.802Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery+Ajax+PHP实现异步登录</title>
+        <pubTime>2018-05-19T11:48:34.341Z</pubTime>
+        
+        <tag>ajax</tag>
+         
+        <tag>php</tag>
+         
+        <tag>jQuery</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
 </urlset>
