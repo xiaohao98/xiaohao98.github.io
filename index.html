@@ -115,17 +115,17 @@
 
 
 
-  <meta name="description" content="That&apos;s all, thank you！">
+  <meta name="description" content="To Be a Better Me">
 <meta name="keywords" content="Study">
 <meta property="og:type" content="website">
 <meta property="og:title" content="戎码一生">
 <meta property="og:url" content="http://www.xhcoder.com/index.html">
 <meta property="og:site_name" content="戎码一生">
-<meta property="og:description" content="That&apos;s all, thank you！">
+<meta property="og:description" content="To Be a Better Me">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="戎码一生">
-<meta name="twitter:description" content="That&apos;s all, thank you！">
+<meta name="twitter:description" content="To Be a Better Me">
 
 
 
@@ -283,6 +283,160 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.xhcoder.com/blog-3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524386896123&di=4fe88da2555d0b30dae72b5be5dca236&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D491db63ec31349547e4be060637ebe6e%2Fc8ea15ce36d3d539a1c2017c3287e950342ab095.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="戎码一生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog-3.html" itemprop="url">
+                  jQuery+Ajax+PHP实现异步登录
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-05-19 19:48:34 / 修改时间：19:48:20" itemprop="dateCreated datePublished" datetime="2018-05-19T19:48:34+08:00">2018-05-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>同步和异步的区别</strong></p>
+<p>同步的思想是所有的操作都做完，才返回给用户。这样用户在线等待的时间太长，给用户一种卡死了的感觉（就是系统迁移中，点击了迁移，界面就不动了，但是程序还在执行，卡死了的感觉）。这种情况下，用户不能关闭界面，如果关闭了，即迁移程序就中断了。</p>
+<p>异步是将用户请求放入消息队列，并反馈给用户，系统迁移程序已经启动，你可以关闭浏览器了。然后程序再慢慢地去写入数据库去。这就是异步。但是用户没有卡死的感觉，会告诉你，你的请求系统已经响应了。你可以关闭界面了。</p>
+<p>同步，是所有的操作都做完，才返回给用户结果。即写完数据库之后，在相应用户，用户体验不好。</p>
+<p>异步，不用等所有操作等做完，就相应用户请求。即先相应用户请求，然后慢慢去写数据库，用户体验较好。</p>
+<p><strong>前端发送数据的方式：</strong><br>前端发送数据到后端，一是通过form表单来进行提交数据，还有一种是通过ajax来提交数据。这里我简单说一下如何使用ajax来发送数据。<br>ajax：异步的JavaScript和xml的简称。通过ajax可以实现在当前页面直接提交数据到后台服务器，并且局部更新UI。</p>
+<p><strong>下面介绍一下异步登录的具体实现</strong><br>HTML中的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//一些简单的input框</span><br><span class="line">&lt;input type=&quot;text&quot; id=&quot;username&quot; placeholder=&quot;用户名&quot;&gt;&lt;br/&gt;&lt;br/&gt;</span><br><span class="line">&lt;input type=&quot;password&quot; id=&quot;password&quot; placeholder=&quot;密码&quot;&gt;&lt;br/&gt;&lt;br/&gt;</span><br><span class="line">&lt;input id=&quot;login&quot; type=&quot;button&quot; value=&quot;登录&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>ajax部分的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	$(function()&#123;</span><br><span class="line">	//jQuery中的oncilck点击事件，&apos;#login&apos;为选择id为login的元素</span><br><span class="line">	    $(&apos;#login&apos;).on(&apos;click&apos;, function()&#123;</span><br><span class="line">	        var username = $(&apos;#username&apos;).val(); </span><br><span class="line">	        var password = $(&apos;#password&apos;).val();</span><br><span class="line">	        $.ajax(&#123;</span><br><span class="line">				type: &apos;POST&apos;,</span><br><span class="line">				url: &quot;login.php&quot;,</span><br><span class="line">				data: &#123;username: username, password: password&#125;,</span><br><span class="line">				dataType: &apos;json&apos;,</span><br><span class="line">				success: function(status)&#123;</span><br><span class="line">					if (status == 1) &#123;</span><br><span class="line">					    alert(&quot;登录成功&quot;);</span><br><span class="line">					    window.location.href=&quot;next.html&quot;;</span><br><span class="line">					&#125; else &#123;</span><br><span class="line">					    alert(&quot;登录失败&quot;);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>其中，type为传输数据的类型，url为数据要提交到的为置，data为提交的数据，这个数据必须是json格式，即键值对，冒号前是参数名，冒号后是参数值。dataType为数据类型，json。success后面的函数为如果数据提交成功并有返回值时执行的函数。</p>
+<p>login.php：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">header(&quot;Content-Type: text/html;charset=utf-8&quot;);</span><br><span class="line">$username = $_POST[&apos;username&apos;];//获取username的值  </span><br><span class="line">$password = $_POST[&apos;password&apos;];//获取password的值</span><br><span class="line">if($username==123&amp;&amp;$password==456)</span><br><span class="line">	$status=1;//登录成功</span><br><span class="line">else</span><br><span class="line">    $status=0;//登录失败</span><br><span class="line">echo json_encode($status);//将返回结果转为json格式</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>基本流程就这样子，前端输入用户名和密码，点击按钮，获取值，组装json，然后发送到后台，后台获取到结果，返回一个json对象，前端再成功的回调函数里解析json，将服务器返回的结果alert出来。这里我是用php处理ajax传来的数据，其实还可以用java等</p>
+<p>我这里是判断的如果用户名为123，密码为456的时候登录成功，其实真正的应该是连接数据库到数据库里去比较用户名和密码</p>
+<p><strong>我这里是直接用ajax提交input框中的数据，但是在项目中都是用ajax提交form表单中的数据实现异步登录，原理一样，关于ajax提交form表单的数据后续更新！</strong></p>
+<p>还有一个非常重要的问题是我这里采用的是jquery封装的ajax，所以必须引用jQuery的插件<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>ajax是前端和后端工程师都必备的技术，希望能通过这个小例子能理解一些ajax的工作原理</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -644,7 +798,7 @@
                 alt="Jason" />
             
               <p class="site-author-name" itemprop="name">Jason</p>
-              <p class="site-description motion-element" itemprop="description">That's all, thank you！</p>
+              <p class="site-description motion-element" itemprop="description">To Be a Better Me</p>
           </div>
 
           
@@ -654,7 +808,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -673,7 +827,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
