@@ -323,6 +323,242 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.xhcoder.com/blog-5.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524386896123&di=4fe88da2555d0b30dae72b5be5dca236&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D491db63ec31349547e4be060637ebe6e%2Fc8ea15ce36d3d539a1c2017c3287e950342ab095.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="戎码一生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog-5.html" itemprop="url">
+                  Javascript：一个屌丝的逆袭
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-05-21 23:31:07 / 修改时间：23:32:25" itemprop="dateCreated datePublished" datetime="2018-05-21T23:31:07+08:00">2018-05-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>是的， 我就是鼎鼎大名的Javascript,  典型的高富帅，前端编程之王，数以百万计的程序员使用我来编程。 如果你没有用过我就太out了。<br>不过当我是一个屌丝时， 真的没有想到能发展到如今的地位……</p>
+</blockquote>
+<h2 id="第一章：出世"><a href="#第一章：出世" class="headerlink" title="第一章：出世"></a>第一章：出世</h2><p>我出生在上古时代的浏览器Netscape中， 那个时候的网页真是乏善可陈， 你可能都想象不到， 主要是些丑陋的静态文本和简单的图片， 和现在美轮美奂的页面相比，差的实在太远了， 不信你请看著名的Yahoo 网站：<br><img src="http://p7l8g56wk.bkt.clouddn.com/18-5-21/47155077.jpg" alt="此处输入图片的描述"></p>
+<p>  那个时候人们还在用Modem（调制解调器）通过电话线拨号上网， 每次拨号都有种吱吱啦啦声音， 就像一个铁片努力的刮一个锅底，让无数人抓狂不已。</p>
+<p>这还不算什么， 网速只有28.8kbit /s   , 下载一个网页都得耐心的等待半天。 </p>
+<p>我的主人Brendan Eich 有一回用公司的Netscape上网购物的时候， 需要注册用户， 填了一个表单， 点击了提交按钮， 等待了38秒， 然后服务器告诉他：“对不起， 您忘了选择性别了”</p>
+<p>他几乎要崩溃：“靠，怎么能够这样！  这么简单的问题浏览器怎么不告诉我， 还得让我把数据提交到几千公里外的服务器网站， 然后在那里检查才能发现问题吗！”</p>
+<p>对浏览器进行改革势在必行！</p>
+<p>Brendan Eich 于是去找老板： “我实在是受不了了， 我需要一种脚本语言运行在浏览器中， 帮助我完成这些本来就应该在浏览器中完成的任务“</p>
+<p>老板： “我们Netscape公司也早有此意， 要不你来设计一个吧”</p>
+<p>Brendan Eich： “好啊， 你听说过LISP（确切的说是Scheme）吗， 当今最牛的编程语言，我们公司何不把Scheme 运行在浏览器中呢？ “</p>
+<p>老板： “LISP有谁会用啊？  ”</p>
+<p>Brendan Eich： “……”</p>
+<p>老板： “我们正在和Sun 公司合作， 你听说过他们刚发明的Java 吗， 那个运行在浏览器中的Applet简直是酷毙了，Java 肯定是未来的网络语言。 所以你要搞个新语言出来，要和java 足够相似， 但是要比java 简单的多的多， 这样那些网页开发人员就可以用了。 ”</p>
+<p>我的主人Brendan Eich很郁闷， 但是也没有办法， 他对java 毫无兴趣，  为了应付公司的任务， 他只花了10天就把我设计了出来，  对了， 我本来叫LiveScript， 但是为了向“万恶”的Java示好， 我竟然被改成了 Javascript !</p>
+<p>由于设计时间太短，我的一些细节考虑得不够严谨，导致后来很长一段时间，Javascript写出来的程序混乱不堪。如果主人预见到，未来这种语言会成为互联网第一大语言，全世界有成千上万的学习者，他会不会多花一点时间呢?</p>
+<h2 id="第二章：成长"><a href="#第二章：成长" class="headerlink" title="第二章：成长"></a>第二章：成长</h2><p>Java 是当时的明星语言， 年轻，活力四射 ， 他经常嘲笑我： 你小子到底是个计算机语言吗？ </p>
+<p>我说“是啊， 我的语法和你差不多呢”</p>
+<p>Java： “你为什么只能在浏览器中运行啊？ 你能写个程序单独运行吗, 哎对了你能读取一个文件吗 ?” </p>
+<p>我当然读取不了文件，我生活在浏览器里， 用我写的程序只能嵌入在html网页中， 由浏览器中来执行。他们给这个执行模块起了一个很有动感的名字: javascript 引擎</p>
+<p>我于是反击Java :  “我有个引擎你知道吗？”<br>但是Java 轻松就把我打翻在地： “我还有个虚拟机呢”</p>
+<p>年长的C也问我：你怎么不编译运行啊， 你看我编译以后，运行的多快。<br>我说： 省省吧， 要是每个页面打开后都先编译javascript ,那多慢啊。 </p>
+<p>不仅仅是Java 和C ,  包括VB， Delphi等当时流行的语言都瞧不起我，背地里叫我屌丝。 </p>
+<p>也是， 我没法独立运行， 也不能像VB,Delphi他们画出漂亮的界面， 我能做的就是操作HTML 的DOM 和浏览器。<br>你可能不知道DOM是什么东西，  这么说吧， 浏览器从服务器取到HTML网页以后， 会展示成页面让你看， 但是他的内部其实会把HTML组织成一个树给我，<br>这个树可以称为DOM。 例如这个页面：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">title</span>&gt;</span>Sample Page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello world!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>DOM树会长成这样：<br><img src="http://p7l8g56wk.bkt.clouddn.com/18-5-21/13648536.jpg" alt="此处输入图片的描述"></p>
+<p>  有了这棵树， 我就能大展身手，我可以定位到DOM树中任意一个节点， 然后对这个节点进行操作， 例如隐藏节点、显示节点、改变颜色、获得文本的值， 改变文本的值 ，添加一个响应点击事件的函数 等等等等， 几乎可以为所欲为了。</p>
+<p>更重要的是， 这些操作可以立刻展示出效果来， 你完全不用刷新网页。</p>
+<p>注意这些操作完全是内部进行的， html源码并不会改变， 所以有时候你打开html源码，会发现这些源码和你在浏览器中看的效果并不一致， 那就是我在背后改变了这个DOM树了。 </p>
+<p>我的主人Brendan Eich最初遇到的问题简直就是小菜一碟了， 做个简单的表单验证，太简单了。</p>
+<p>不只是操作DOM， 我还能控制浏览器， 比如打开窗口， 在一个窗口内前进，后退， 获得浏览器的名称， 版本 等等。<br>你可能要问了， 为啥还要获得浏览器的名称和版本呢？  </p>
+<p>说起来惭愧， 在Netscape 和IE 进行浏览器之战的期间， 他们都争相在自己的浏览器中支持Javascript, 并且为了锁定程序员， 还开发了很多自己浏览器的独特功能， 有些功能只能在IE用， 有些只能在Netscape 用， 所以必须的判断是什么浏览器， 这样才能特殊处理。 </p>
+<p>不管怎么说， 我的这些本事让浏览器中的网页变的更加动态了， 更加有趣好玩了。 </p>
+<p>但仅限于此， 我被困在浏览器和网页上， 别的什么也干不了。 </p>
+<p>用Java 的话来说： 这些都是雕虫小技，奇技淫巧， 只是一个打着我的羊头卖狗肉的屌丝而已。 </p>
+<h2 id="第三章：-第一桶金"><a href="#第三章：-第一桶金" class="headerlink" title="第三章： 第一桶金"></a>第三章： 第一桶金</h2><p>互联网的发展超出了所有人的预料， 我被应用在几乎每一个网站上，  但我一直很苦闷： 我作为一门语言，在浏览器中运行， 没法像java 那样访问网络， 也就没有办法调用服务器端的接口来获取数据。 </p>
+<p>用户只能通过GET或者POST向服务器发送请求，这时候服务器返回的数据是整个页面， 而不是页面中的一个片段，  也就是说整个页面都得刷新一遍， 哪怕是页面中只有一个文字的改变。 </p>
+<p>1998年的时候 ，我和积极进取的IE5做了一次会谈， 双方就共同关心的话题深入的交换了意见， 最后一致同意， 在IE5中引入一个新的功能：XMLHttpRequest  ， 这个新功能将允许我直接向服务器发出接口调用！</p>
+<p>每当发起调用时， IE5通常会这么说：<br>“小JS啊， 来， 你拿这个用户名和密码访问一下服务器端处理登陆的接口 ， 这个过程很费时间，我就不等你了， 先干别的事儿去了，  你得到服务器端的返回数据以后， 一定要记着调用下我给你的这个函数啊。 “ </p>
+<p>我知道这其实叫做异步调用， 于是就乖乖的通过XMLHttpRequest  访问那个登录的url,  耐心的等待服务器干完活，把数据传输回来， 然后我就去调用那个函数， 基本是就是把DOM树的某个节点更新一下， 例如让那个包含用户名和密码登陆框消失， 再加一个提示消息：登录成功   ， 这事儿我很擅长。 </p>
+<p>如果服务器处理和网络速度都足够快的话， 用户就会发现： 咦， 我没有刷新整个页面， 竟然已经登录了啊。</p>
+<p>我和IE都没有料到，这个功能带来了一场革命： 这种方式可以使得网页局部刷新， 让用户浏览网页的体验极佳， 尤其是Google 地图， Gmail 等应用让互联网应用火了起来。 </p>
+<p>其他浏览器也迅速跟进，实现了类似功能， 各种各样交互性极佳的网站如雨后春笋般出现。</p>
+<p>VB和Delphi 慢慢的不再嘲笑我了， 因为他们绝望的发现， 他们擅长的桌面应用慢慢的都被搬到了互联网上， 没人再喜欢他们了。</p>
+<p>我， Javascript，  挖到了第一桶金，开始走向人生巅峰。 </p>
+<h2 id="第四章：-发明JSON"><a href="#第四章：-发明JSON" class="headerlink" title="第四章： 发明JSON"></a>第四章： 发明JSON</h2><p>后来有个好事之徒把上面的那种处理方式称为AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML）， 其实异步挺好， 但是XML就很不爽了。 </p>
+<p>比如说服务器返回了下面这段xml ：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">book</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">isbn</span>&gt;</span>978-7-229-03093-3<span class="tag">&lt;/<span class="name">isbn</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>三体<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">author</span>&gt;</span>刘慈欣<span class="tag">&lt;/<span class="name">author</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">introduction</span>&gt;</span>中国最牛的科幻书<span class="tag">&lt;/<span class="name">introduction</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">price</span>&gt;</span>38.00<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>真正的数据很少， 标签（像<name>这样的）反而占了大头， 把数据都给淹没了。</name></p>
+<p>我对XML说： “你是不是太臃肿了， 传输起来多费劲啊。”</p>
+<p>XML说：“切，你这就不懂了，这样很优雅啊，格式化良好， 人可以读，　程序也可以读啊。”</p>
+<p>“优雅个啥啊， 无用的数据这么多， 再说我还得用XML解析器来解析你， 费了劲了！”</p>
+<p>“你真是屌丝啊，连个解析都搞不定，  你看人家Java， 用我用的多Happy , Spring, Struts, Hibernate, 几乎所有配置文件都是我。”</p>
+<p>Java 也在一旁帮腔： 是啊， 我解析的时候还用DTD 做校验呢， 看看XML数据合法不合法。 </p>
+<p>我无语。 </p>
+<p>记得CPU阿甘说过：既然改变不了别人， 那就改变一下自己吧。 </p>
+<p>我看了看我的语法， 里边有个叫对象的东西, 它有一个花括号， 在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义， 属性由逗号分隔， 像这样：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> book = &#123; </span><br><span class="line"><span class="string">"isbn"</span>: <span class="string">"978-7-229-03093-3"</span>, </span><br><span class="line"><span class="string">"name"</span>: <span class="string">"三体"</span>,  </span><br><span class="line"> <span class="string">"author"</span>: <span class="string">"刘慈欣"</span>,</span><br><span class="line"><span class="string">"introduction"</span>: <span class="string">"中国最牛的科幻书"</span>,</span><br><span class="line"><span class="string">"price"</span>: <span class="string">"38.00"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>这种结构完全可以表达上面的xml 内容啊！<br>我的语法还支持数组，这样表达多个对象也不在话下啊：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> books = [</span><br><span class="line"> &#123; </span><br><span class="line"><span class="string">"isbn"</span>: <span class="string">"978-7-229-03093-3"</span>, </span><br><span class="line"><span class="string">"name"</span>: <span class="string">"三体"</span>,   </span><br><span class="line"><span class="string">"author"</span>: <span class="string">"刘慈欣"</span>,</span><br><span class="line"><span class="string">"introduction"</span>: <span class="string">"中国最牛的科幻书"</span>,</span><br><span class="line"><span class="string">"price"</span>: <span class="string">"38.00"</span></span><br><span class="line"> &#125;,</span><br><span class="line"> &#123; </span><br><span class="line"><span class="string">"isbn"</span>: <span class="string">"978-7-229-03094-1"</span>, </span><br><span class="line"><span class="string">"name"</span>: <span class="string">"我是一个线程"</span>,   </span><br><span class="line"><span class="string">"author"</span>: <span class="string">"刘欣"</span>,</span><br><span class="line"><span class="string">"introduction"</span>: <span class="string">"一个线程的自述"</span>,</span><br><span class="line"><span class="string">"price"</span>: <span class="string">"0.0"</span></span><br><span class="line"> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p>数组和对象都支持嵌套， 任何复杂的结构都可以保存！</p>
+<p>更重要的是， 如果采用这种结构， 我根本不用什么XML解析器去解析了，它就是我语言的一部分。 直接拿来用即可。</p>
+<p>books[0].name  –&gt;返回“三体”<br>books<a href="http://p7l8g56wk.bkt.clouddn.com/18-5-21/47155077.jpg" target="_blank" rel="noopener">1</a>.introduction –&gt; 返回“一个线程的自述”</p>
+<p>生活不要太爽啊 :-)</p>
+<p>我把这种简洁的格式叫做JSON,  并且和服务器约定， 我们以后都用JSON来传输数据。</p>
+<p>至于XML, 还是让Java 这样的老学究去用吧。</p>
+<h2 id="第五章：人生巅峰"><a href="#第五章：人生巅峰" class="headerlink" title="第五章：人生巅峰"></a>第五章：人生巅峰</h2><p>HTML负责结构， CSS负责展示， 而我（加上AJAX, JSON） 负责逻辑。<br>于是前端编程三剑客形成了。 </p>
+<p>ExtJS, prototype, JQuery 这些框架把前端编程推向另外一个高峰。 </p>
+<p>甚至出现了AngularJS  这样的奇葩，实现了SPA(单一页面应用程序)， 实在是难于想象。</p>
+<p>我给Java 说： Java 兄， 现在我完全可以在浏览器端实现MVC了， 你只需要在服务器端通过接口给我提供数据就行了。</p>
+<p>但是Java 还是给我泼冷水： 别得意忘形了， 服务器端才是核心， 要不你到服务器端试试？</p>
+<p>我很诧异：“服务器端？ 我还真没有想过， 住在64G内存， 32核的CPU 这种拥有几乎无限资源的机器上是什么感觉？ ”</p>
+<p>“感觉没你想象的好 “ Java 没声好气的说 “多线程编程， 很多东西都要加锁， 一不留神就掉到坑里。 我这里基本一个请求就是一线程来处理， 遇到数据库操作， 虽然慢的要死，线程也得等待。 ”</p>
+<p>“那不能改成异步操作吗？像我的AJAX一样， 数据来了再通知我 “ 我问Java。</p>
+<p>“不行， 一开始就是这样， 现在改不了”</p>
+<p>把Javascript 放到服务器端执行怎么样?  这个想法够疯狂的。 </p>
+<p>首先得把浏览器端的运行环境， 就是javascript引擎移到服务器端， 这个引擎执行javasript 得足够快，要不Java 还不得笑死我。<br>原来的引擎一直不合格， 知道Chrome V8的出现， 才解决问题。</p>
+<p>其次得绕开java 服务器的问题： 线程遇到IO/数据库/网络 这样的耗时操作， 不能等待， 得搞成异步处理。</p>
+<p>但的确有人这么做了， 在我的创始人Brendan Eich 发明了我10几年以后 ， 又一位大牛Ryan Dahl于2009年真的把我放到了服务器端。这就是node.js </p>
+<p>这下Java无话可说了， 虽然他还是对我在服务器端执行持怀疑态度，  但越来越多使用node.js的网站证明， javascript的确可以在服务器端立足， 并且有一个巨大的优势：前端和后端都用同样的开发语言：那就是我 javascript </p>
+<p>原来的前端开发现在竟然也可以毫无障碍的写后端的程序了， 是名副其实的“全栈工程师” ！</p>
+<p>这就是我，一个屌丝的逆袭， 我的创始人绝对想不到10几年后我能成为这么一个高富帅， 我估计他夜里经常会想： “唉，当年太仓促了， 我要是把javascript 设计的更好一点就好了。” </p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.xhcoder.com/blog-4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1066,7 +1302,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1093,7 +1329,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1120,7 +1358,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
