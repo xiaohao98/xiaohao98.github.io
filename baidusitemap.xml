@@ -4,19 +4,39 @@
 
     
   <url>
-    <loc>http://www.xhcoder.com/blog-5.html</loc>
-    <lastmod>2019-05-24T12:27:06.908Z</lastmod>
+    <loc>http://www.xhcoder.com/Git-1.html</loc>
+    <lastmod>2019-05-24T13:25:57.187Z</lastmod>
     <data>
         <display>
-        <title>Javascript：一个屌丝的逆袭</title>
-        <pubTime>2018-05-21T15:31:07.836Z</pubTime>
+        <title>浅谈Git</title>
+        <pubTime>2019-05-24T13:24:20.485Z</pubTime>
         
-        <tag>Javasctipt</tag>
+        <tag>Git</tag>
          
          
            
              
-              <breadCrumb title="Javasctipt" url="http://www.xhcoder.com/categories/Javasctipt/"/>
+              <breadCrumb title="Git" url="http://www.xhcoder.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xhcoder.com/blog-2.html</loc>
+    <lastmod>2019-05-24T12:48:56.196Z</lastmod>
+    <data>
+        <display>
+        <title>26. 删除排序数组中的重复项</title>
+        <pubTime>2018-04-22T13:55:36.666Z</pubTime>
+        
+        <tag>leetcode</tag>
+         
+         
+           
+             
+              <breadCrumb title="leetcode" url="http://www.xhcoder.com/categories/leetcode/"/>
           
         </display>
     </data>
@@ -25,7 +45,7 @@
     
   <url>
     <loc>http://www.xhcoder.com/blog-4.html</loc>
-    <lastmod>2018-05-21T15:04:48.465Z</lastmod>
+    <lastmod>2019-05-24T12:48:36.646Z</lastmod>
     <data>
         <display>
         <title>一个故事讲完https</title>
@@ -42,6 +62,26 @@
           
              
               <breadCrumb title="http" url="http://www.xhcoder.com/categories/https/http/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.xhcoder.com/blog-5.html</loc>
+    <lastmod>2019-05-24T12:27:06.908Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript：一个屌丝的逆袭</title>
+        <pubTime>2018-05-21T15:31:07.836Z</pubTime>
+        
+        <tag>Javasctipt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Javasctipt" url="http://www.xhcoder.com/categories/Javasctipt/"/>
           
         </display>
     </data>
@@ -94,26 +134,6 @@
            
              
               <breadCrumb title="Markdown" url="http://www.xhcoder.com/categories/Markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.xhcoder.com/blog-2.html</loc>
-    <lastmod>2018-05-19T15:44:33.588Z</lastmod>
-    <data>
-        <display>
-        <title>26. 删除排序数组中的重复项</title>
-        <pubTime>2018-04-22T13:55:36.666Z</pubTime>
-        
-        <tag>leetcode</tag>
-         
-         
-           
-             
-              <breadCrumb title="leetcode" url="http://www.xhcoder.com/categories/leetcode/"/>
           
         </display>
     </data>
