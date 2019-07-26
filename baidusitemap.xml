@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://www.xhcoder.com/Springboot-2.html</loc>
-    <lastmod>2019-07-26T05:51:03.239Z</lastmod>
+    <lastmod>2019-07-26T06:04:07.470Z</lastmod>
     <data>
         <display>
-        <title></title>
+        <title>Springboot使用MultipartFile方式上传文件</title>
         <pubTime>2019-07-26T05:59:41.531Z</pubTime>
         
+        <tag>Springboot</tag>
+         
          
            
+             
+              <breadCrumb title="Springboot" url="http://www.xhcoder.com/categories/Springboot/"/>
+          
         </display>
     </data>
     </url>
