@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.xhcoder.com/blog-1.html</loc>
+    
+    <lastmod>2020-01-03T03:02:55.992Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.xhcoder.com/MicroService-2.html</loc>
     
     <lastmod>2019-09-18T07:15:51.631Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>http://www.xhcoder.com/blog-3.html</loc>
     
     <lastmod>2018-05-19T15:50:25.138Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.xhcoder.com/blog-1.html</loc>
-    
-    <lastmod>2018-05-19T15:45:17.202Z</lastmod>
     
   </url>
   
